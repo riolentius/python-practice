@@ -1,14 +1,10 @@
-from cProfile import label
-from email import message
 from tkinter import *
-from tkinter.ttk import Labelframe
 from turtle import bgcolor
 from PIL import ImageTk, Image
 from tkinter import messagebox
 from matplotlib.pyplot import text
 from numpy import place
 import pymysql
-from zmq import REQ_RELAXED
 
 mypass = "asdfgce159"  # use your own password
 mydatabase = "db"  # the database name
@@ -49,16 +45,15 @@ def View():
     try:
         cur.execute(getBooks)
         con.commit()
-
         for i in cur:
-            label(labelFrame, text="%-10s%-30s%-30s%-20s" %
+            Label(labelFrame, text="%-10s%-30s%-30s%-20s" %
                   (i[0], i[1], i[2], i[3]), bg='black', fg='white').place(relx=0.07, rely=y)
             y += 0.1
     except:
         messagebox.showinfo("Failed to fetch files from database")
 
-        quitBtn = Button(root, text="Quit", bg='#f7f1e3',
-                         fg='black', command=root.destroy)
-        quitBtn.place(relx=0.4, rely=0.9, relwidth=0.18, relheight=0.08)
+    quitBtn = Button(root, text="Quit", bg='#f7f1e3',
+                     fg='black', command=root.destroy)
+    quitBtn.place(relx=0.4, rely=0.9, relwidth=0.18, relheight=0.08)
 
-        root.mainloop()
+    root.mainloop()
