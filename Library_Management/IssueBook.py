@@ -39,7 +39,6 @@ def issue():
         con.commit()
         for i in cur:
             allbid.append(i[0])
-            print(extractBid)
 
         if bid in allbid:
             checkAvail = "select status from "+bookTable+"where bid = '"+bid+"'"

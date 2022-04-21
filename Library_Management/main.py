@@ -6,6 +6,7 @@ from AddBook import *
 from ViewBooks import *
 from DeleteBook import *
 from IssueBook import *
+from ReturnBook import *
 
 mypass = "asdfgce159"  # use your own password
 mydatabase = "db"  # the database name
@@ -66,4 +67,7 @@ btn3 = Button(root, text="Issue Book to Student",
               bg='black', fg='white', command=issueBook)
 btn3.place(relx=0.28, rely=0.7, relwidth=0.45, relheight=0.1)
 
+btn4 = Button(root, text="Return book", bg='black',
+              fg='white', command=returnBook)
+btn4.place(relx=0.28, rely=0.8, relwidth=0.45, relheight=0.1)
 mainloop()
