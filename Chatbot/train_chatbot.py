@@ -1,7 +1,9 @@
-from keras.layers import Dense, Activation, Dropout
+from unittest.util import unorderable_list_difference
+from tensorflow.python.keras.layers import Dense, Activation, Dropout
 import random
-from keras.optimizers import sgd_experimental
-from keras.models import Sequential
+import tensorflow as tf
+from tensorflow.python.keras.models import Sequential
+from keras.optimizer_v1 import SGD
 import numpy as np
 import json
 import nltk
@@ -66,7 +68,8 @@ for doc in documents:
     pattern_word = doc[0]
 
     # lemmatize each word - create base word, in attempt to represent related words
-    pattern_word = [lemmatizer.lemmatize(words.lower()) for word in pattern]
+    pattern_word = [lemmatizer.lemmatize(
+        words.lower()) for words in pattern_word]
 
     # create our bag of words array with 1, if word match found in current pattern
     for w in words:
@@ -88,3 +91,23 @@ print("Training data created")
 
 # Build Model
 # create model - 3 layers, first layer 128 neurons, second layer 64 neurons
+# equal to number of intents to predict output intent with softmax
+
+model = Sequential()
+model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(64, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(len(train_y[0]), activation='softmax'))
+
+# compile model. stochastic gradient descent with nesterov accelerated gradient give good results for this model
+sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+model.compile(loss='categorial_corssentropy',
+              optimizer='sgd', metrics=['accuracy'])
+
+# fitting and saving the model
+hist = model.fit(np.array(train_x), np.array(train_y),
+                 epochs=200, batch_size=5, verbose=1)
+model.save('chatbot_model.h5', hist)
+
+print("model created")
