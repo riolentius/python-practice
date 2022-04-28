@@ -1,9 +1,9 @@
-from unittest.util import unorderable_list_difference
-from tensorflow.python.keras.layers import Dense, Activation, Dropout
 import random
 import tensorflow as tf
-from tensorflow.python.keras.models import Sequential
-from keras.optimizer_v1 import SGD
+from tensorflow import keras
+from keras.models import Sequential
+from keras.optimizers import SGD
+from keras.layers import Dense, Activation, Dropout
 import numpy as np
 import json
 import nltk
