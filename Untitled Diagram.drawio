@@ -1,1 +1,30 @@
-<mxfile host="app.diagrams.net" modified="2023-01-03T06:36:09.617Z" agent="5.0 (Windows)" version="20.8.0" etag="jbxUEk0n_31IIGLJxyF8" type="github"><diagram id="-b4TBnpdNDoqHnEV51WL">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-01-04T03:44:05.492Z" agent="5.0 (Windows)" version="20.8.0" etag="Vzzr7vL0oRl1r1sac0WC" type="github">
+  <diagram id="accU9gudKg5mZlHegD7e" name="Page-1">
+    <mxGraphModel dx="478" dy="832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="b40Wa10dnx9YJlDa_M7R-14" value="user_table" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="160" width="200" height="230" as="geometry">
+            <mxRectangle x="30" y="160" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b40Wa10dnx9YJlDa_M7R-15" value="user_id -int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="b40Wa10dnx9YJlDa_M7R-14">
+          <mxGeometry x="10" y="30" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b40Wa10dnx9YJlDa_M7R-16" value="username - varchar" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="b40Wa10dnx9YJlDa_M7R-14">
+          <mxGeometry x="10" y="70" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b40Wa10dnx9YJlDa_M7R-17" value="password - varchar" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="b40Wa10dnx9YJlDa_M7R-14">
+          <mxGeometry x="10" y="110" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b40Wa10dnx9YJlDa_M7R-18" value="created_date - date" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="b40Wa10dnx9YJlDa_M7R-14">
+          <mxGeometry x="10" y="150" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b40Wa10dnx9YJlDa_M7R-19" value="status - boolean" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="b40Wa10dnx9YJlDa_M7R-14">
+          <mxGeometry x="10" y="190" width="120" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
